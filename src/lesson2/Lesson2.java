@@ -117,7 +117,7 @@ public class Lesson2 {
                 }
             }
         }
-        for(int i  = 2; i < A.length; i++){
+        for(int i  = 2; i < limit; i++){
             if(A[i]){
                 if(primeNumber%i == 0) return false;
             }
