@@ -76,7 +76,7 @@ public class Lesson2 {
     private static void task7(){
         int counter = 0;
         for(int i = 0; i < 24; i++){
-            for(int j = 0; j < 59; j++){
+            for(int j = 0; j < 60; j++){
                 if(i == getInvertedValue(j, 2)){
                     counter++;
                 }
