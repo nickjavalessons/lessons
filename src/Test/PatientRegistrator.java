@@ -36,9 +36,10 @@ public class PatientRegistrator implements Command {
             String time = sc.next();
             LocalDateTime ldt;
             ldt = LocalDateTime.parse(time);
-            if(registration.setTimeOfRegistration(ldt)) break;//там должна быть проверка на свободное время
+            if(registration.setTimeOfRegistration(ldt, doctorToReg)) break;//там должна быть проверка на свободное время
             System.out.println("Время занято или вне рабочего времени врачей, введите новое");
         }
+        Registration.addRegistration(registration);
 
 
 

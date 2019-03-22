@@ -12,14 +12,15 @@ public abstract class Role {
             return new HeadDoctor();
 
         } else if("doc".equals(role)) {
+            return new Doctor();
 
         } else if("patient".equals(role)){
+            return new Patient();
 
         } else if("admin".equals(role)){
-
+            return new AdminRole();
         }
         return null;
-
     }
     public  void operateWithRole(Scanner sc){
         System.out.println("Роль " + getName());

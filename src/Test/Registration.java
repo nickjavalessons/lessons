@@ -8,7 +8,9 @@ public class Registration {
     private User doctor;
     private User patient;
     private LocalDateTime timeOfRegistration;
-
+    public static void addRegistration(Registration r){
+        registrations.add(r);
+    }
     public User getDoctor() {
         return doctor;
     }
@@ -29,7 +31,8 @@ public class Registration {
         return timeOfRegistration;
     }
 
-    public boolean setTimeOfRegistration(LocalDateTime timeOfRegistration) {
+    public boolean setTimeOfRegistration(LocalDateTime timeOfRegistration, User doc) {
+        //тут где-то надо проверить на свободное время для доктора
         this.timeOfRegistration = timeOfRegistration;
         return true;
     }
