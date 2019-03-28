@@ -53,7 +53,7 @@ public class MessageTask {
 //        [{URGENT, 4}, {HIGH, 9}, {LOW, 3}, {HIGH, 9}]
         // на выходе:
         // [{URGENT, 4}, {HIGH, 9}, {LOW, 3}]
-        Set<Message> uniquieSet = new TreeSet<>();
+        Set<Message> uniquieSet = new LinkedHashSet<>();
         for(Message m: messageList) uniquieSet.add(m);
         List<Message> list = new ArrayList<>(uniquieSet);
         return list;
